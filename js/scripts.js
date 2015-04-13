@@ -1,6 +1,7 @@
 $(function () {
 
     $('form#new_Task').submit(function(event) {
+        event.preventDefault();
         var new_Task_Name = $('input#task_Name').val();
         var new_Task_Description = $('input#task_Description').val();
 
@@ -20,7 +21,7 @@ $(function () {
             $(this).remove();
         });
 
-        event.preventDefault();
+
     });
 
 
