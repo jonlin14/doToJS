@@ -14,7 +14,7 @@ $(function () {
         $('.list').last().click(function() {
           selectedList = new_List;
           //display all tasks for selected list
-          $('#tasks').text(selectedList.tasks);
+          $('#tasks').append(selectedList.tasks);
         });
     });
 
@@ -34,10 +34,10 @@ $(function () {
         //
         // });
 
-        selectedList.tasks.forEach(function(task) {
-          $("ul#tasks").text("<li>" + task.name + "</li>");
+         selectedList.tasks.forEach(function(task) {
+          $("ul#tasks").append("<li>" + task.name + "</li>");
 
-        });
+       });
 
 
 
